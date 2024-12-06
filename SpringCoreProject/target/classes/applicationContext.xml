@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="studentbean" class="SetterDI.Student">
+		<property name="id" value="1000"></property>
+		<property name="name" value="VENKAT"></property>
+		<property name="gender" value="MALE"></property>
+		<property name="age" value="20"></property>
+		<property name="cgpa" value="9.46"></property>
+		<property name="backlogs" value="0"></property>
+		<property name="graduated" value="false"></property>
+		<property name="certifications">
+			<list>
+				<value>EX183</value>
+				<value>AZ-900</value>
+				<value>AWS CP</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="facultybean" class="ConstructorDI.Faculty">
+	<constructor-arg value="1234"></constructor-arg>
+	<constructor-arg value="KLEF"></constructor-arg>
+	<constructor-arg value="FEMALE"></constructor-arg>
+	<constructor-arg value="40.5"></constructor-arg>
+	<constructor-arg value="45000.50"></constructor-arg>
+	<constructor-arg value="true"></constructor-arg>
+	<constructor-arg>
+	<list>
+	<value>JFSD</value>
+	<value>MSWD</value>
+	<value>AWS</value>
+	</list>
+	</constructor-arg>
+	</bean>
+	
+	
+	<!-- Auto Wiring -->
+	<bean id="personbean" class="AutoWiring.Person">
+	<property name="id" value="101"></property>
+	<property name="name" value="VENKAT"></property>
+	<property name="gender" value="MALE"></property>
+	<property name="age" value="20.1"></property>
+	<property name="contact" value="9440765499"></property>
+	<property name="address" ref="addressbean"></property>
+	</bean>
+	
+	<bean id="addressbean" class="AutoWiring.Address">
+	<property name="street" value="BENZ CIRCLE"></property>
+	<property name="city" value="VJA"></property>
+	<property name="district" value="KRISHNA"></property>
+	<property name="state" value="AP"></property>
+	<property name="pincode" value="520010"></property>
+	</bean>
+
+</beans>

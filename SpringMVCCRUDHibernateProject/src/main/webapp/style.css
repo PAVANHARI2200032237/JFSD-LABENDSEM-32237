@@ -1,0 +1,63 @@
+
+.navbar {
+            background-color: #f0f0f0; /* Light grey background */
+            overflow: hidden;
+            border-bottom: 2px solid #ccc; /* Soft border to separate navbar */
+            font-family: Montserrat, sans-serif;
+            text-align: center; /* Center the links */
+        }
+
+        /* Navbar Links */
+        .navbar a {
+            display: inline-block;
+            color: #333; /* Dark grey text for better contrast */
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+		
+        /* Navbar Links - Hover */
+        .navbar a:hover {
+            background-color: #ddd; /* Slightly darker grey for hover */
+            color: #000; /* Darker text on hover */
+            border-radius: 5px;
+        }
+        
+        
+/* Table Styles */
+table {
+    width: 80%; /* Adjust the width as needed */
+    margin: 20px auto; /* Center the table */
+    border-collapse: collapse; /* Remove space between table borders */
+    font-family: Montserrat, sans-serif; /* Use the same font as the navbar */
+    background-color: #f9f9f9; /* Light background color for the table */
+}
+
+table, th, td {
+    border: 1px solid #ddd; /* Light grey border for table cells */
+}
+
+th, td {
+    padding: 12px; /* Add padding for better spacing */
+    text-align: center; /* Center align text in cells */
+}
+
+th {
+    background-color: #4CAF50; /* Green background for header */
+    color: white; /* White text color for header */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light grey background for even rows */
+}
+
+tr:hover {
+    background-color: #ddd; /* Slightly darker background on hover */
+}
+
+td {
+    color: #333; /* Dark grey text for table content */
+    font-size: 14px; /* Font size for table content */
+}
+
